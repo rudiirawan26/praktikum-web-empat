@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        option {
+            outline-width: 50px;
+            outline-style: solid;
+            outline-color: black;
+        }
+    </style>
+
+</head>
+
+<body align="center" bgcolor="bcbcbc">
+    <h1>Image_Picker</h1>
+    <select onchange="option();" id="daftar_gambar">
+        <div class="img">
+            <option
+                value="https://1.bp.blogspot.com/-yAUQQCfyyW4/X78xPAh32sI/AAAAAAAAAko/qwUStuh2kdAjnqsMKl8p34FYCnERNbesACLcBGAsYHQ/s500/tupai.jpg">
+                Tupai</option>
+            <option
+                value="https://1.bp.blogspot.com/-Xh8g9GbeQmM/X78xO0ErKrI/AAAAAAAAAkk/6WZu-bRJa1wgFeFiKNwcMV0IipnAYExSwCLcBGAsYHQ/s500/singa.jpg">
+                Singa</option>
+            <option
+                value="https://1.bp.blogspot.com/-CfY_bukChi4/X78xO8auOGI/AAAAAAAAAkg/9xpfaHpxE5otwIulHhwh91CRED-Jkm9ygCLcBGAsYHQ/s500/rusa.jpg">
+                Rusa</option>
+            <option
+                value="https://1.bp.blogspot.com/-Zz7PXui-hC8/X78xONNugsI/AAAAAAAAAkY/ODpj4JCvkmg5QD6B7yv0g9RucrEVPJ-wwCLcBGAsYHQ/s500/koala.jpg">
+                Koala</option>
+            <option
+                value="https://1.bp.blogspot.com/-S_eDnI311U4/X78xOCLXpcI/AAAAAAAAAkc/Yx-t36Z-BvwtM4Mr7QYPtxZP8RzVrNYlwCLcBGAsYHQ/s500/hiu.jpg">
+                Ikan Hiu</option>
+    </select></div>
+    <br />
+    <img id="gambar" style="width: 400px">
+</body>
+<script type="text/javascript">
+    function option() {
+        let gambar = document.getElementById("daftar_gambar").value;
+        document.getElementById("gambar").src = gambar;
+        alert("Link : " + gambar);
+    }
+</script>
+
+</html>

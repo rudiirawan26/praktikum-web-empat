@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <script>
+        function save() {
+            let pesan = document.forms['form']['chat'].value;
+            let tabel = document.getElementById("hasiltabel");
+            let baris = tabel.insertRow(1);
+            let kol1 = baris.insertCell(0);
+            kol1.innerHTML = pesan;
+        }
+    </script>
+</head>
+
+
+
+<body>
+
+    <div class="container" style=" border: 1px solid; width: 280px; height: 300px; ">
+        <table id="hasiltabel">
+            <tr>
+                <td scope="col"></td>
+            </tr>
+
+            <form name="form">
+                <div style="margin-left: 5px; margin-top: 272px; position:fixed;">
+                    <input id="chat" type="text" size="22" placeholder="Masukan Pesan Anda disini!"></input>
+                    <button onclick="save()" type="button">Kirim Pesan</button>
+                </div>
+
+            </form>
+        </table>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    function login() {
+        var email = document.getElementById("email").value;
+        var nama = document.getElementById("nama").value;
+        var tujuan = document.getElementById("tujuan").value;
+        var jam = document.getElementById("jam").value;
+
+
+        if (nama.length > 30) {
+            alert("Huruf tak boleh lebih dari 30 karakter");
+            return false;
+        }
+        if (document.getElementById("penumpang").value > 10) {
+            alert("Jumlah Penumpang Tak Boleh lebih dari 10, untuk satu kali pemesanan");
+            return false;
+        }
+        if (tujuan == "Jakarta") {
+            alert("Tujuan Anda Jakarta")
+            return false;
+        }
+        if (tujuan == "Bandung") {
+            alert("Tujuan Anda Bandung")
+            return false;
+        }
+        if (tujuan == "Surabaya") {
+            alert("Tujuan Anda Surabaya")
+            return false;
+        }
+
+
+    }
+    }
+
+</html >

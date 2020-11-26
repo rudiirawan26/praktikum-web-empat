@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+
+    <script>
+        function kurs() {
+
+            a = document.getElementById("kurs").value;
+
+            if (a == 1) {
+                input = document.getElementById("nilai").value;
+                nilai = 9915;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = "Rp. " + hitung;
+            } else if (a == 2) {
+                input = document.getElementById("nilai").value;
+                nilai = 13472;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = "Rp. " + hitung;
+            } else if (a == 3) {
+                input = document.getElementById("nilai").value;
+                nilai = 874;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = "Rp. " + hitung;
+            } else if (a == 4) {
+                input = document.getElementById("nilai").value;
+                nilai = 120;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = "Rp. " + hitung;
+            } else if (a == 5) {
+                input = document.getElementById("nilai").value;
+                nilai = 15888;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = "Rp. " + hitung;
+            } else if (a == 6) {
+                input = document.getElementById("nilai").value;
+                nilai = 3592;
+                hitung = nilai * input;
+                document.getElementById("rupiah").value = "Rp. " + hitung;
+            }
+        }
+    </script>
+
+    <style>
+        td {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <fieldset style="background-color: #f0feff; width: 300px; text-align: center;">
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <div class="ket">
+                    <td><b>Masukan Nilai</b></td>
+                    <td><b>Valas</b></td>
+                    <td><b>Nilai Rupiah</b></td>
+                </div>
+
+            </tr>
+
+            <tr>
+                <td><input onkeyup="kurs()" placeholder="Masukan Nilai" type="text" name="nilai" id="nilai"></td>
+                <td><select onchange="kurs()" id="kurs">
+                        <option value="1">Dollar US</option>
+                        <option value="2">Dollar Singapore</option>
+                        <option value="3">Ringgit Malaysia</option>
+                        <option value="4">Yen Jepang</option>
+                        <option value="5">Euro</option>
+                        <option value="6">Riyal Arab Saudi</option>
+                    </select></td>
+                <td><input type="text" disabled="" id="rupiah" placeholder="Rp. " name="rupiah"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+</body>
+
+</html>
